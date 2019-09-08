@@ -12,7 +12,7 @@ def actor_page(name):
 def movie_list(name):
     response = get(actor_page(name))
     soup = BeautifulSoup(response.text, 'html.parser')
-    roles=soup.find_all(id=re.compile("^actor"))
+    roles=soup.find_all(id=re.compile("^act"))
     movies=[]
     year=[]
     for i in roles:
